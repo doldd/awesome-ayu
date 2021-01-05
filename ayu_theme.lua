@@ -3,7 +3,7 @@
 -- @Author: Marcel Arpogaus
 -- @Date:   2019-10-23 19:28:06
 --
--- @Last Modified by: Marcel Arpogaus
+-- @Last Modified by:   Daniel
 -- @Last Modified at: 2020-10-02 11:52:21
 -- [ description ] -------------------------------------------------------------
 -- factory to build a awesome theme based on a given colorscheme
@@ -73,9 +73,9 @@ module.set_color_scheme = function(self, cs)
     self.fg_focus = cs.colors[4]
     self.fg_urgent = cs.colors[2]
     self.fg_minimize = cs.fg
-    self.border_width = 1
+    self.border_width = 2
     self.border_normal = cs.fg
-    self.border_focus = cs.colors[7]
+    self.border_focus = cs.colors[5]
     self.border_marked = cs.colors[4]
     self.menu_border_width = 0
     self.menu_height = 30
