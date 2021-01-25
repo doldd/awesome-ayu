@@ -3,7 +3,7 @@
 -- @Author: Marcel Arpogaus
 -- @Date:   2019-06-16 10:35:55
 --
--- @Last Modified by: Marcel Arpogaus
+-- @Last Modified by:   Daniel
 -- @Last Modified at: 2020-10-02 10:00:07
 -- [ description ] -------------------------------------------------------------
 -- date and time widgets

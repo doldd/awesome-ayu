@@ -3,7 +3,7 @@
 -- @Author: Marcel Arpogaus
 -- @Date:   2019-06-16 10:35:55
 --
--- @Last Modified by: Marcel Arpogaus
+-- @Last Modified by:   Daniel
 -- @Last Modified at: 2020-10-02 10:11:37
 -- [ description ] -------------------------------------------------------------
 -- weather widgets
@@ -112,6 +112,10 @@ local function weather_widget_container(args)
         spacing = spacing,
         layout = wibox.layout.fixed.vertical
     }
+    -- weather_box.bg = '#ff0000ff'
+
+    -- local box_container = wibox.container.background()
+    -- box_container.bg = bg_color
 
     -- return widget
     return wibox.widget {

@@ -3,7 +3,7 @@
 -- @Author: Marcel Arpogaus
 -- @Date:   2019-07-15 08:12:41
 --
--- @Last Modified by: Marcel Arpogaus
+-- @Last Modified by:   Daniel
 -- @Last Modified at: 2020-10-20 12:44:16
 -- [ description ] -------------------------------------------------------------
 -- wibar widgets

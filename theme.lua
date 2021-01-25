@@ -3,7 +3,7 @@
 -- @Author: Marcel Arpogaus
 -- @Date:   2019-06-30 20:36:28
 --
--- @Last Modified by: Marcel Arpogaus
+-- @Last Modified by:   Daniel
 -- @Last Modified at: 2020-10-20 12:49:02
 -- [ description ] -------------------------------------------------------------
 -- AYU Awesome WM theme
@@ -135,7 +135,7 @@ theme.at_screen_connect = function(s)
     if config.arc_widgets then
         local wtable = {
             spacing = theme.desktop_widgets_arc_spacing,
-            layout = wibox.layout.fixed.horizontal
+            layout = wibox.layout.fixed.vertical
         }
         for i, w in pairs(config.arc_widgets) do
             local midx = #theme.widgets.desktop.arcs
@@ -154,25 +154,40 @@ theme.at_screen_connect = function(s)
         s.desktop_popup = awful.popup {
             widget = {
                 {
-                    -- Center widgets vertically
-                    nil,
                     {
-                        -- Center widgets horizontally
+                        -- Center widgets vertically
                         wibox.widget {
-                            nil,
-                            wtable,
-                            nil,
-                            expand = 'outer',
-                            layout = wibox.layout.align.vertical
+                                nil,
+                                wtable,
+                                nil,
+                                expand = 'outside',
+                                layout = wibox.layout.align.horizontal
                         },
-                        desktop_widgets.clock(),
-                        desktop_widgets.weather(s, config.widgets_arg.weather),
-                        expand = 'outside',
-                        layout = wibox.layout.align.vertical
+                        {
+                            -- Center widgets horizontally
+                            nil,
+                            {
+    
+                                desktop_widgets.clock(),
+                                desktop_widgets.weather(s, config.widgets_arg.weather),
+                                nil,
+                                expand = 'inside',
+                                forced_height = s.workarea.height/2,
+                                layout = wibox.layout.align.vertical
+
+                            },
+                            nil,
+                            layout = wibox.layout.grid.vertical,
+                        },
+                        nil,
+                        expand = 'none',
+                        layout = wibox.layout.align.horizontal
                     },
-                    nil,
-                    expand = 'none',
-                    layout = wibox.layout.align.horizontal
+                    widget = wibox.container.margin,
+                    left = s.workarea.width/100,
+                    right = s.workarea.width/100,
+                    top = s.workarea.height/50,
+                    bottom = s.workarea.height/100,
                 },
                 widget = wibox.container.constraint,
                 forced_width = s.workarea.width,

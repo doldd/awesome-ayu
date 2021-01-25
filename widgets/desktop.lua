@@ -3,7 +3,7 @@
 -- @Author: Marcel Arpogaus
 -- @Date:   2019-11-18 10:19:01
 --
--- @Last Modified by: Marcel Arpogaus
+-- @Last Modified by:   Daniel
 -- @Last Modified at: 2020-10-20 12:44:28
 -- [ description ] -------------------------------------------------------------
 -- desktop widgets

@@ -3,7 +3,7 @@
 -- @Author: Marcel Arpogaus
 -- @Date:   2019-06-16 10:35:55
 --
--- @Last Modified by: Marcel Arpogaus
+-- @Last Modified by:   Daniel
 -- @Last Modified at: 2020-10-02 10:18:43
 -- [ description ] -------------------------------------------------------------
 -- networking widgets
@@ -33,6 +33,7 @@ local vicious = require('vicious')
 
 local util = require('themes.ayu.util')
 local widgets = require('themes.ayu.widgets')
+local config = require('config')
 
 -- [ local objects ] -----------------------------------------------------------
 local widget_defs = {}
@@ -42,7 +43,7 @@ local net_icons = {down = '', up = ''}
 local default_timeout = 3
 local default_fg_color = beautiful.fg_normal
 local default_bg_color = beautiful.bg_normal
-local default_interface = 'eth0'
+local default_interface = config.widgets_arg.net.net_interface
 local default_value = 'down'
 
 -- [ sequential code ] ---------------------------------------------------------
